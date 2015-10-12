@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\newcommand*{\glossaryname}{Dictionary}
+\usepackage{glossaries}
+\newcommand{\dictentry}[2]{%
+  \newglossaryentry{#1}{name=#1,description={#2}}%
+  \glslink{#1}{}%
+}
+ 
+\makeglossaries
+ 
+\begin{document}
+
+\dictentry{Best Practice}{Prassi (modo di fare) che per esperienza e per studio abbia mostrato di garantire i migliori risultati in circostanze note e specifiche}%
+\dictentry{Ciclo di Vita del Software}{Gli stati che il prodotto assume dal concepimento al ritiro}%
+\dictentry{Efficacia}{Determinata dal grado di conformità del prodotto rispetto alle norme vigenti e agli obbiettivi proposti}%
+\dictentry{Efficienza}{Inversamente proporzionale alla quantità di risorse impiegate nell'esecuzione delle attività richieste}%
+\dictentry{Incremento}{Significa aggiungere a un impianto base.\\Prevede l'avvicinamento alla meta aggiungento o togliendo, non entrambe.\\Aggiongendo o togliendo soltanto non è possibile tornare sui propri passi (a differenza dell'iterazione), permettendo quindi di conoscere in anticipo il numero di passi da compiere}%
+\dictentry{Interfaccia}{Contratto}%
+\dictentry{Iterazione}{Significa operare raffiramenti o rivisitazioni.\\Si retrocede per avanzare, annulla potenzialmente quanto fatto precedentemente per soddisfare certe condizioni.\\ATTENZIONE: potenzialmente distruttiva, non si sa dire a priori quando finirà (buco nero)}%
+\dictentry{Modelli di Ciclo di Vita}{Descrivono come i processi si relazionano tra loro nel tempo rispetto agli stati di ciclo di vita.\\Base concettuale intorno alla quale pianificare, organizzare, eseguire e controllare lo svolgimento delle attività necessarie}%
+\dictentry{Processi di Ciclo di Vita}{Specificano le attività che vanno svolte per causare transizioni di stato nel ciclo di vita di un prodotto SW}%
+\dictentry{Prototipi}{Tipo originario, abbozzo, per provare e scegliere soluzioni.\\- USA e GETTA: serve a capire il problema.\\- BASELINE: si presta alla soluzione ma rischia di essere un'iterazione}%
+\dictentry{Stakeholder}{Portatore di interesse.\\L'insieme di persone a vario titolo coinvolte nel ciclo di vita del SW con influenza sul prodotto}%
+
+\printglossary[title=Glossario Ingegneria del Software, toctitle=List of terms,nonumberlist,style=altlist]%
+ 
+\end{document}
